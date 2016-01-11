@@ -1,0 +1,27 @@
+.portfolio-item {
+	height: 200px;
+}
+
+.front {
+	transition: -webkit-transform 3s;
+	backface-visibility:hidden;
+
+}
+
+.back {
+	top: -200px;
+	position: relative;
+	transition: -webkit-transform 3s;
+	z-index: -1;
+	-webkit-transform:rotateY(180deg);
+
+}
+
+.portfolio-item:hover .front {
+	-webkit-transform:rotateY(180deg);
+	
+}
+
+.portfolio-item:hover .back {
+	-webkit-transform:rotateY(0deg);
+}
